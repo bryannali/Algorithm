@@ -16,7 +16,7 @@ def solution1(nums, target):
             if nums[i] + nums[j] == target:
                 return [i, j]
 result1 = solution1(nums, target)
-print("笨蛋方法1：" , result1)
+print("笨蛋方法1：", result1)
 
 #方法2 先排序，取首尾元素相加。循环 如果目标值大于结果值 尾元素-1，反之 首元素+1:
 def solution2(nums, target):
@@ -28,15 +28,15 @@ def solution2(nums, target):
             y -= 1
         elif x + y < target:
             x += 1
-        #else:
-            # x = x
-            # y = y
-            #break
+        # else:
+        #     # x = x
+        #     # y = y
+        #     break
     index1 = nums.index(new_nums[x])
     index2 = nums.index(new_nums[y])
     return [index1, index2]
 result2 = solution1(nums, target)
-print("方法二：" , result2)
+print("方法二：" ,result2)
 
 #方法3 哈希表遍历
 def solution3(nums, target):
@@ -49,4 +49,4 @@ def solution3(nums, target):
             mapper[nums[i]] = i
     return []
 result3 = solution3(nums, target)
-print("方法三：" , result3)
+print("方法三：" ,result3)
