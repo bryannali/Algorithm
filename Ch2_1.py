@@ -28,10 +28,10 @@ def solution2(nums, target):
             y -= 1
         elif x + y < target:
             x += 1
-        else:
+        #else:
             # x = x
             # y = y
-            break
+            #break
     index1 = nums.index(new_nums[x])
     index2 = nums.index(new_nums[y])
     return [index1, index2]
