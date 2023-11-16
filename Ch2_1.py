@@ -23,10 +23,11 @@ def solution2(nums, target):
     new_nums = sorted(nums)
     x = 0
     y = len(new_nums)-1
-    while True:
-        if x + y > target:
+    while x < y:
+        current_sum = new_nums[x] + new_nums[y]
+        if current_sum > target:
             y -= 1
-        elif x + y < target:
+        elif current_sum < target:
             x += 1
         else:
         #     # x = x
@@ -35,7 +36,7 @@ def solution2(nums, target):
     index1 = nums.index(new_nums[x])
     index2 = nums.index(new_nums[y])
     return [index1, index2]
-result2 = solution1(nums, target)
+result2 = solution2(nums, target)
 print("方法二：" ,result2)
 
 #方法3 哈希表遍历
