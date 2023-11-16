@@ -20,7 +20,7 @@ print("笨蛋方法1：", result1)
 
 #方法2 先排序，取首尾元素相加。循环 如果目标值大于结果值 尾元素-1，反之 首元素+1:
 def solution2(nums, target):
-    new_nums = nums.sort()
+    new_nums = sorted(nums)
     x = 0
     y = len(new_nums)-1
     while True:
@@ -28,10 +28,10 @@ def solution2(nums, target):
             y -= 1
         elif x + y < target:
             x += 1
-        # else:
+        else:
         #     # x = x
         #     # y = y
-        #     break
+            break
     index1 = nums.index(new_nums[x])
     index2 = nums.index(new_nums[y])
     return [index1, index2]
