@@ -25,9 +25,9 @@ def solution2(nums, target):
     y = len(new_nums)-1
     while True:
         if x + y > target:
-            new_nums[y] -= 1
+            y -= 1
         elif x + y < target:
-            new_nums[x] += 1
+            x += 1
         else:
             # x = x
             # y = y
