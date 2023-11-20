@@ -19,3 +19,20 @@ print(isPalindrome(head))
 
 head = (1, (2, None))
 print(isPalindrome(head)) 
+
+
+#判断链表是否回文
+#首先链表的值存放在数组中，用数组形式判断是否回文
+def isPalindrome2(head):
+    value = []  
+    current = head  
+    while current:
+        value.append(current[0])  
+        current = current[1] 
+    return value == value[::-1] #判断
+
+head = (1, (3, (3, (1, None))))
+print(isPalindrome2(head))  
+
+head = (1, (2, None))
+print(isPalindrome2(head)) 
